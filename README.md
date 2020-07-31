@@ -89,6 +89,7 @@ Once the plugin get installed, restart the IDE.
 
 Suggestion : To manage your database, use Sequel Pro, a MySQL management tool designed for macOS.
 http://www.sequelpro.com/
+
 ---
 
 ### Finally Install ElasticSearch
