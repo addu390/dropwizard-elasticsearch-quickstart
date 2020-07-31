@@ -33,7 +33,7 @@ sharded:
     - driverClass: org.mariadb.jdbc.Driver
       user: "root"
       password: ""
-      url: jdbc:mariadb:sequential://localhost:3306/mf-1?createDatabaseIfNotExist=true
+      url: jdbc:mariadb:sequential://localhost:3306/quick-1?createDatabaseIfNotExist=true
       properties:
         charSet: UTF-8
         hibernate.dialect: org.hibernate.dialect.MySQLDialect
@@ -51,7 +51,7 @@ sharded:
     - driverClass: org.mariadb.jdbc.Driver
       user: "root"
       password: ""
-      url: jdbc:mariadb:sequential://localhost:3306/mf-2?createDatabaseIfNotExist=true
+      url: jdbc:mariadb:sequential://localhost:3306/quick-2?createDatabaseIfNotExist=true
       properties:
         charSet: UTF-8
         hibernate.dialect: org.hibernate.dialect.MySQLDialect
