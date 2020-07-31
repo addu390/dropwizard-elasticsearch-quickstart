@@ -28,8 +28,6 @@ public class SearchModule extends AbstractModule {
          * Index index = new Index.Builder(source).index("twitter").type("tweet").id("1").build();
          * jestClient.execute(index);
          */
-
-
     }
 
     @Singleton
