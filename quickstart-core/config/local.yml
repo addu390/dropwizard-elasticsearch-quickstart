@@ -1,0 +1,71 @@
+server:
+  maxThreads: 256
+  minThreads: 256
+  applicationConnectors:
+    - type: http
+      port: 8080
+  adminConnectors:
+    - type: http
+      port: 8081
+  applicationContextPath: /
+  requestLog:
+    appenders:
+      - type: console
+        timeZone: IST
+
+
+logging:
+  level: DEBUG
+  # Logger-specific levels.
+  loggers:
+    com.phonepe.payments: DEBUG
+    org.hibernate: ERROR
+
+  appenders:
+    - type: console
+      threshold: INFO                                                         `
+      timeZone: IST
+      logFormat: "%(%-5level) [%date] [%thread] [%logger{0}]: %message%n"
+
+
+sharded:
+  shards:
+    - driverClass: org.mariadb.jdbc.Driver
+      user: "root"
+      password: ""
+      url: jdbc:mariadb:sequential://localhost:3306/mf-1?createDatabaseIfNotExist=true
+      properties:
+        charSet: UTF-8
+        hibernate.dialect: org.hibernate.dialect.MySQLDialect
+      maxWaitForConnection: 1s
+      validationQuery: "/* MyApplication Health Check */ SELECT 1"
+      validationQueryTimeout: 3s
+      minSize: 8
+      maxSize: 32
+      checkConnectionWhileIdle: false
+      checkConnectionOnBorrow: true
+      evictionInterval: 10s
+      minIdleTime: 1 minute
+      defaultTransactionIsolation: READ_COMMITTED
+
+    - driverClass: org.mariadb.jdbc.Driver
+      user: "root"
+      password: ""
+      url: jdbc:mariadb:sequential://localhost:3306/mf-2?createDatabaseIfNotExist=true
+      properties:
+        charSet: UTF-8
+        hibernate.dialect: org.hibernate.dialect.MySQLDialect
+      maxWaitForConnection: 1s
+      validationQuery: "/* MyApplication Health Check */ SELECT 1"
+      validationQueryTimeout: 3s
+      minSize: 8
+      maxSize: 32
+      checkConnectionWhileIdle: false
+      checkConnectionOnBorrow: true
+      evictionInterval: 10s
+      minIdleTime: 1 minute
+      defaultTransactionIsolation: READ_COMMITTED
+
+
+#esConfiguration:
+#  serverUri: "http://localhost:9200"
