@@ -1,7 +1,7 @@
-package com.example.application.dao.impl;
+package com.example.dao.impl;
 
-import com.example.application.dao.UserDao;
-import com.example.application.entity.User;
+import com.example.dao.UserDao;
+import com.example.entity.User;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import io.appform.dropwizard.sharding.dao.LookupDao;

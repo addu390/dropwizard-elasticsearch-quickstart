@@ -1,4 +1,4 @@
-package com.example.application.entity;
+package com.example.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.appform.dropwizard.sharding.sharding.LookupKey;

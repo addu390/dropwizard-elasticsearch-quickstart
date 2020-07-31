@@ -1,9 +1,9 @@
-package com.example.application.module;
+package com.example.module;
 
 import com.example.application.ServiceConfiguration;
-import com.example.application.dao.UserDao;
-import com.example.application.dao.impl.UserDaoImpl;
-import com.example.application.entity.User;
+import com.example.dao.UserDao;
+import com.example.dao.impl.UserDaoImpl;
+import com.example.entity.User;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import com.google.inject.Singleton;
