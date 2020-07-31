@@ -59,7 +59,7 @@ $JAVA_HOME/bin/java -version
 
     brew install maven
 ---
-**Clone the repository** 
+### Clone the repository 
 ```sh
 git clone git@github.com:addu390/dropwizard-elasticsearch-quickstart.git
 ``` 
@@ -84,11 +84,13 @@ Search Lombok in Marketplace Search bar.
 Install Lombok plugin by Michail Plushnikov.
 Once the plugin get installed, restart the IDE.
 ```
-
+---
 ### Let's prepare our database
+
 Suggestion : To manage your database, use Sequel Pro, a MySQL management tool designed for macOS.
 http://www.sequelpro.com/
 ---
+
 ### Finally Install ElasticSearch
 Installation guide: https://www.elastic.co/guide/en/elasticsearch/reference/current/brew.html
 
