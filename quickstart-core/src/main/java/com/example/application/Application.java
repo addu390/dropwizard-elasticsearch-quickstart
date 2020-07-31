@@ -1,6 +1,7 @@
 package com.example.application;
 
 import com.example.module.DBModule;
+import com.example.search.SearchModule;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.MapperFeature;
@@ -60,7 +61,8 @@ public class Application extends io.dropwizard.Application<ServiceConfiguration>
         GuiceBundle<ServiceConfiguration> guiceBundle = GuiceBundle.<ServiceConfiguration>builder()
                 .enableAutoConfig(packageNameList.toArray(new String[0]))
                 .modules(
-                        new DBModule(dbShardingBundle)
+                        new DBModule(dbShardingBundle),
+                        new SearchModule()
                 )
                 .build(Stage.PRODUCTION);
 
