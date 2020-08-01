@@ -25,4 +25,10 @@ public class UserDaoImpl implements UserDao {
         final Optional<User> user = userDao.get(userId);
         return user.orElse(null);
     }
+
+    @Override
+    public boolean save(final User user) throws Exception {
+        Optional<User> result = userDao.save(user);
+        return result.isPresent();
+    }
 }
