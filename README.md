@@ -75,7 +75,7 @@ Go to `Run > Edit Configurations` , Click on `+` sign there and select `Applicat
 - **Main class :** `com.example.application.Application` .
 - **VM Options :** `-DshouldCreateNewEntitySchema=true` .
 - **Program arguments :** `server config/local.yml`.
-- **Working directory :** `<path to /dropwizard-elasticsearch-quickstart/quickstart-core>`
+- **Working directory :** `path to /dropwizard-elasticsearch-quickstart/quickstart-core`
 ---
 After setting Configurations, we need to add `Lombok` plugin. For setting up `Lambok` follow these steps :
 ```
