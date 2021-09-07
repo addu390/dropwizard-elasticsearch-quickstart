@@ -67,5 +67,5 @@ sharded:
       defaultTransactionIsolation: READ_COMMITTED
 
 
-#esConfiguration:
-#  serverUri: "http://localhost:9200"
+esConfiguration:
+  serverUri: "http://localhost:9200"

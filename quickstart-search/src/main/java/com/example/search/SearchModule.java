@@ -21,13 +21,6 @@ public class SearchModule extends AbstractModule {
     @Override
     protected void configure() {
         JestClient jestClient = getJestClient();
-        /**
-         * Client Usage:
-         * Map<String, String> source = new LinkedHashMap<String,String>();
-         * source.put("user", "kimchy");
-         * Index index = new Index.Builder(source).index("twitter").type("tweet").id("1").build();
-         * jestClient.execute(index);
-         */
     }
 
     @Singleton

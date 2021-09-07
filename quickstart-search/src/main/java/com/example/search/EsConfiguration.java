@@ -12,7 +12,5 @@ public class EsConfiguration {
     @JsonProperty
     @NotBlank(message = "This field cannot be empty")
     private String serverUri;
-
-
 }
 
