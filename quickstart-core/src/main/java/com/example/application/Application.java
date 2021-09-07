@@ -1,5 +1,6 @@
 package com.example.application;
 
+import com.example.module.ApplicationModule;
 import com.example.module.DBModule;
 import com.example.search.SearchModule;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -62,7 +63,8 @@ public class Application extends io.dropwizard.Application<ServiceConfiguration>
                 .enableAutoConfig(packageNameList.toArray(new String[0]))
                 .modules(
                         new DBModule(dbShardingBundle),
-                        new SearchModule()
+                        new SearchModule(),
+                        new ApplicationModule()
                 )
                 .build(Stage.PRODUCTION);
 

@@ -33,7 +33,7 @@ public class SearchModule extends AbstractModule {
     @Singleton
     @Provides
     public JestClient getJestClient() {
-        JestClient client = null;
+        JestClient client;
         try {
             JestClientFactory factory = new JestClientFactory();
             factory.setHttpClientConfig(new HttpClientConfig
