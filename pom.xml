@@ -18,7 +18,7 @@
         <dropwizard.guicey.version>4.2.1</dropwizard.guicey.version>
         <lombok.version>1.16.16</lombok.version>
         <guava.version>20.0</guava.version>
-        <jackson.databind.version>2.9.6</jackson.databind.version>
+        <jackson.databind.version>2.9.10.8</jackson.databind.version>
         <hibernate.validator.version>5.2.4.Final</hibernate.validator.version>
         <dropwizard.version>1.3.13</dropwizard.version>
         <db.sharding.version>1.3.13-4</db.sharding.version>
